@@ -11,4 +11,4 @@
 
 ## Importing dummy data
 1. docker cp path/to/file/dummy.json <container_name>:/tmp/dummy.json
-2. docker exec <container_name> mongoimport -d gagan --file /tmp/dummy.json
+2. docker exec 41d7141eea2e mongoimport -d gagan -c dishes --file /tmp/dummy.json
