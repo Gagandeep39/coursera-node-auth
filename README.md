@@ -6,5 +6,9 @@
 ## Steps
 
 1. `express <dicrectory-name>` or `express ./`
-2. `npm intall`
+2. `npm intall` **NOTE** `npm i mongoose-currency --legacy-peer-deps ` If there is an error for mongoose-currency
 3. `npm start`
+
+## Importing dummy data
+1. docker cp path/to/file/dummy.json <container_name>:/tmp/dummy.json
+2. docker exec <container_name> mongoimport -d gagan --file /tmp/dummy.json
