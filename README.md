@@ -10,5 +10,10 @@
 3. `npm start`
 
 ## Importing dummy data
-1. docker cp path/to/file/dummy.json <container_name>:/tmp/dummy.json
-2. docker exec 41d7141eea2e mongoimport -d gagan -c dishes --file /tmp/dummy.json
+
+1. docker cp path/to/file/dishes.json <container_name>:/tmp/dishes.json
+2. docker exec 41d7141eea2e mongoimport -d gagan -c dishes --file /tmp/dishes.json
+3. docker cp path/to/file/leaders.json <container_name>:/tmp/leaders.json
+4. docker exec 41d7141eea2e mongoimport -d gagan -c leaders --file /tmp/leaders.json
+5. docker cp path/to/file/promos.json <container_name>:/tmp/promos.json
+6. docker exec 41d7141eea2e mongoimport -d gagan -c promos --file /tmp/promos.json
