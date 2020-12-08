@@ -16,6 +16,7 @@
 		"edwardhjp.vscode-author-generator",
 		"oderwat.indent-rainbow",
 		"yzhang.markdown-all-in-one",
+		"humao.rest-client",
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
