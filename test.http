@@ -2,4 +2,10 @@
 GET http://localhost:3000/dish
 
 ### Fetch all comments for an ID
-GET http://localhost:3000/dish/5fcf1f5939a9cda440dc4515/comments
+GET http://localhost:3000/dish/5fcf281f112c14687bdffa8a/comments
+
+### Fetch all promos
+GET http://localhost:3000/promo
+
+### Fesch leader
+GET http://localhost:3000/leader/5fcf26529f377e9699afa194
