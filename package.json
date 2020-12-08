@@ -1,5 +1,5 @@
 {
-  "name": "coursera-express-generator",
+  "name": "coursera-express-mongo",
   "version": "0.0.0",
   "private": true,
   "scripts": {
