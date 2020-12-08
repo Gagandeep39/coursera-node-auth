@@ -1,2 +1,5 @@
 ### Fetch all dishes
 GET http://localhost:3000/dish
+
+### Fetch all comments for an ID
+GET http://localhost:3000/dish/5fcf1f5939a9cda440dc4515/comments
