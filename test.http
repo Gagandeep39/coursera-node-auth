@@ -1,0 +1,2 @@
+### Fetch all dishes
+GET http://localhost:3000/dish
