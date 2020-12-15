@@ -45,7 +45,6 @@ app.use(session({
   store: new FileStore()
 }));
 app.use(cookieParser('12345-67890-09876-54321'));
-app.use(auth);
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -55,6 +54,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use(auth);
+// Below route are protected
 app.use('/dish', dishRouter);
 app.use('/leader', leaderRouter);
 app.use('/promo', promoRouter);
