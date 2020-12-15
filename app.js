@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 var dishRouter = require('./routes/dish');
 var leaderRouter = require('./routes/leader');
 var promoRouter = require('./routes/promo');
+const auth = require('./middlewares/auth');
 require('dotenv').config();
 
 // Update env to localhost  or rmove env file f running locally i.e outside devcontainer
@@ -32,6 +33,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.use(auth);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
