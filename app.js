@@ -11,6 +11,8 @@ var dishRouter = require('./routes/dish');
 var leaderRouter = require('./routes/leader');
 var promoRouter = require('./routes/promo');
 const auth = require('./middlewares/auth');
+var cookieParser = require('cookie-parser');
+
 require('dotenv').config();
 
 // Update env to localhost  or rmove env file f running locally i.e outside devcontainer
@@ -32,8 +34,10 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-
+// Auth using middlewares
+app.use(cookieParser('12345-67890-09876-54321'));
 app.use(auth);
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
