@@ -1,20 +1,32 @@
 module.exports = function (req, res, next) {
-  console.log(req.session);
+  console.log(req.user);
 
-  if (!req.session.user) {
+  if (!req.user) {
     var err = new Error("You are not authenticated!");
     err.status = 403;
-    return next(err);
+    next(err);
   } else {
-    if (req.session.user === "authenticated") {
-      next();
-    } else {
-      var err = new Error("You are not authenticated!");
-      err.status = 403;
-      return next(err);
-    }
+    next();
   }
 };
+
+// function (req, res, next) {
+//   console.log(req.session);
+
+//   if (!req.session.user) {
+//     var err = new Error("You are not authenticated!");
+//     err.status = 403;
+//     return next(err);
+//   } else {
+//     if (req.session.user === "authenticated") {
+//       next();
+//     } else {
+//       var err = new Error("You are not authenticated!");
+//       err.status = 403;
+//       return next(err);
+//     }
+//   }
+// };
 
 // function (req, res, next) {
 //   console.log(req.session);

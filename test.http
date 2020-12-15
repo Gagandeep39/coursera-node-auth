@@ -18,15 +18,15 @@ POST http://localhost:3000/users/signup
 Content-Type: application/json
 
 {
-  "username": "gagan",
+  "username": "gagandeep",
   "password": "123456"
 }
 
 ### Sign Up ### Use Basic Auth in postman
 POST http://localhost:3000/users/login
-# Content-Type: application/json
+Content-Type: application/json
 
-# {
-#   "username": "gagan",
-#   "password": "123456"
-# }
+{
+  "username": "gagandeep",
+  "password": "123456"
+}

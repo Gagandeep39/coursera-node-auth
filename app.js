@@ -14,6 +14,9 @@ const auth = require('./middlewares/auth');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var FileStore = require('session-file-store')(session);
+var passport = require('passport');
+var authenticate = require('./authenticate');
+
 
 require('dotenv').config();
 
@@ -36,6 +39,8 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+app.use(passport.initialize());
+app.use(passport.session());
 // Auth using middlewares
 app.use(session({
   name: 'session-id',
