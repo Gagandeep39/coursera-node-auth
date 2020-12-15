@@ -10,12 +10,11 @@ var usersRouter = require('./routes/users');
 var dishRouter = require('./routes/dish');
 var leaderRouter = require('./routes/leader');
 var promoRouter = require('./routes/promo');
-const auth = require('./middlewares/auth');
+// const auth = require('./middlewares/auth');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var FileStore = require('session-file-store')(session);
 var passport = require('passport');
-var authenticate = require('./authenticate');
 
 
 require('dotenv').config();
@@ -59,7 +58,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use(auth);
+// app.use(auth);
 // Below route are protected
 app.use('/dish', dishRouter);
 app.use('/leader', leaderRouter);
